@@ -1,13 +1,13 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='django-redis-status',
+    name='django-celery-admin-ext',
     version='1.0',
-    description='A django application that displays the load and some other statistics about your memcached instances in the admin.',
+    description='A django application that lets you kick off periodic celery tasks from the admin.',
     long_description=open('README.md').read(),
-    author='Eric Russell',
-    author_email='erussell@ngs.org',
-    url='http://github.com/erussell/django-redis-status',
+    author='Matt Caldwell',
+    author_email='mcaldwel@ngs.org',
+    url='http://github.com/mattcaldwell/django-celery-admin-ext',
     packages=find_packages(exclude=[]),
     include_package_data=True,
     classifiers=[
