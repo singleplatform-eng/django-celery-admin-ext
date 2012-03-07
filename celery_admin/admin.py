@@ -1,10 +1,10 @@
 from celery.execute import send_task
 from django.contrib import admin
-from djcelery.admin import PeriodicTaskAdmin
+from djcelery import admin as djcelery_admin
 from djcelery.models import PeriodicTask
 
-class ExtendedPeriodicTaskAdmin(PeriodicTaskAdmin):
-    actions = PeriodicTaskAdmin.actions + ['run_task']
+class ExtendedPeriodicTaskAdmin(djcelery_admin.PeriodicTaskAdmin):
+    actions = djcelery_admin.PeriodicTaskAdmin.actions + ['run_task']
 
     def run_task(self, request, queryset):
         if request.user.is_superuser:
