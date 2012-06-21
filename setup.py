@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='django-celery-admin-ext',
-    version='1.0',
+    version='1.0-mc1',
     description='A django application that lets you kick off periodic celery tasks from the admin.',
     long_description=open('README.md').read(),
     author='Matt Caldwell',
