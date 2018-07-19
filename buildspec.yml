@@ -1,0 +1,19 @@
+version: 0.2
+
+env:
+  variables:
+    PIP_BUCKET: 'pip.singleplatform.co'
+phases:
+  install:
+    commands:
+      - mkdir -p dist
+      - pip install --upgrade pip
+      - pip config set global.index-url https://pip.singleplatform.co/simple
+      - pip install --upgrade wheel setuptools piprepo
+  build:
+    commands:
+      - pip wheel --wheel-dir dist .
+  post_build:
+    commands:
+      - piprepo sync dist s3://$PIP_BUCKET
+
