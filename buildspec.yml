@@ -9,13 +9,12 @@ env:
 phases:
   install:
     commands:
-      - mkdir -p dist
       - pip install --upgrade pip
       - pip config set global.index-url https://$PIP_REPO/simple
       - pip install --upgrade wheel setuptools piprepo
   build:
     commands:
-      - pip wheel --wheel-dir dist .
+      - python setup.py bdist_wheel
   post_build:
     commands:
       - piprepo sync dist s3://$PIP_REPO
