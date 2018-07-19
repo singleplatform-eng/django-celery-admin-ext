@@ -1,0 +1,13 @@
+CHANGES
+=======
+
+* django 1.7 support
+* django 1.7 support
+* version increment
+* explicitly import djcelery.admin so the admin functionality can propagate upward to calling apps
+* add ability to run celery periodic tasks from django admin
+* Fix readme file name
+* Fix readme file name
+* Hard wrap text
+* Update readme
+* Initial import
