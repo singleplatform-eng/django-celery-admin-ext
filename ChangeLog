@@ -1,6 +1,7 @@
 CHANGES
 =======
 
+* configure codebuild to skip updating changelog and authors, use pbr package find
 * update authors, changelog
 * update version comment
 * modular piprepo
